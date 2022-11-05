@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+
+import { useAllAdvocates } from "./hooks/useAllAdvocates";
+import Advocates from "./pages/advocates/Advocates";
+import Advocate from "./pages/advocates/Advocate";
+import Home from "./pages/home/Home";
+import Companies from "./pages/companies/Companies";
+import Company from "./pages/companies/Company";
+import Navbar from "./components/Navbar";
 
 function App() {
+  // console.log(advocates && advocates);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/advocates' element={<Advocates />} />
+        <Route
+          path='/advocates/:id'
+          element={<Advocate />}
+        />
+        <Route path='/companies' element={<Companies />} />
+        <Route
+          path='/companies/:id'
+          element={<Company />}
+        />
+      </Routes>
     </div>
   );
 }
