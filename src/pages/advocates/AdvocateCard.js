@@ -35,9 +35,9 @@ const AdvocateCard = ({ advocates }) => {
         // -----------------------
 
         <Link
-          to={``}
-          key={advocate.url}
-          className=' bg-slate-800 divide-y divide-slate-600/20 rounded-lg border border-slate-600/20 border-t-slate-600/70 flex flex-col justify-between '
+          to={`/advocates/${advocate.username}`}
+          key={advocate.username}
+          className=' bg-slate-800/60 divide-y divide-slate-600/20 rounded-lg border border-slate-600/10 border-t-slate-600/50 flex flex-col justify-between '
         >
           {/* -------------------- */}
           {/* advocate info wrapper */}

@@ -7,7 +7,7 @@ const Advocates = () => {
     `https://cados.up.railway.app/advocates`
   );
   return (
-    <div className='custom-container  mt-20 '>
+    <div className='custom-container  my-20  mb-24'>
       {/* ---------------- */}
       {/* adovate headings */}
       {/* ---------------- */}

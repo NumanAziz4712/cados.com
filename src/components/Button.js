@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({ title }) => {
   return (
     <div
-      className=' sm:inline-block px-3 flex-none py-1.5 bg-rose-500 rounded-full text-sm text-center hover:bg-rose-600 text-white
+      className=' sm:inline-block px-3 flex-none py-1.5 bg-sky-500 rounded-full text-sm font-medium text-center hover:bg-sky-600 text-slate-900
     capitalize'
     >
       {title}
