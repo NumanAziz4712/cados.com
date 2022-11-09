@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
-const AdvocateCard = ({ advocates }) => {
+const AdvocateCard = ({ advocates, query }) => {
   // -- ------------------
   // -- Followers formatter
   // -- ------------------
@@ -27,6 +27,16 @@ const AdvocateCard = ({ advocates }) => {
     return number;
   };
   // -- ------------------
+
+  if (advocates.length === 0) {
+    return (
+      <div className='mt-20 text-center text-lg font-medium'>
+        <p>
+          Could not find developers that matches "{query}"
+        </p>
+      </div>
+    );
+  }
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-6 mt-20'>
       {advocates.map((advocate) => (
@@ -61,7 +71,7 @@ const AdvocateCard = ({ advocates }) => {
               </div>
             </div>
             {/*  bio*/}
-            <div className='text-center sm:text-left'>
+            <div className=''>
               <p>{advocate.bio?.substring(0, 100)}</p>
             </div>
           </div>
