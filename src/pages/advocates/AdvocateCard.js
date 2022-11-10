@@ -28,7 +28,7 @@ const AdvocateCard = ({ advocates, query }) => {
   };
   // -- ------------------
 
-  if (advocates.length === 0) {
+  if (advocates?.length === 0) {
     return (
       <div className='mt-20 text-center text-lg font-medium'>
         <p>
@@ -89,7 +89,7 @@ const AdvocateCard = ({ advocates, query }) => {
                 followers
               </span>
             </div>
-            <div className='flex flex-col items-center'>
+            {/* <div className='flex flex-col items-center'>
               <span className='font-semibold text-slate-200 tracking-wide'>
                 {advocate.companies.length > 0
                   ? advocate.companies[0]
@@ -98,7 +98,7 @@ const AdvocateCard = ({ advocates, query }) => {
               <span className='text-[10px] tracking-widest uppercase '>
                 companies
               </span>
-            </div>
+            </div> */}
 
             {/* view profile */}
             <Button title='view profile' />

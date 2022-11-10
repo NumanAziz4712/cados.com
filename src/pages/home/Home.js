@@ -19,7 +19,7 @@ const Home = () => {
 
       {/* ------ */}
 
-      <div className='grid lg:grid-cols-2 grid-cols-1 custom-container items-center justify-between gap-12 mt-20 mb-28 '>
+      <div className='grid lg:grid-cols-2 grid-cols-1 custom-container items-center justify-between gap-12 lg:mt-28 mt-24 mb-28 '>
         {/* main heading */}
         <div className='flex-1'>
           <h1 className='capitalize md:px-8 lg:px-0 text-center lg:text-left font-medium leading-[150%]  sm:leading-[130%] text-sky-100 text-4xl  sm:text-5xl'>

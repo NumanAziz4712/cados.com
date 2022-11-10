@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 export const useAllCompanies = (url) => {
-  const [companies, setCompanies] = useState("");
+  const [companies, setCompanies] = useState(null);
 
   useEffect(() => {
     const getAllCompanies = async () => {

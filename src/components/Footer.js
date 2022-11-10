@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className='bg-[#0A101F]'>
-      <div className='custom-container pt-24 pb-12 flex flex-col items-center'>
+      <div className='custom-container pt-16 md:pt-24 pb-12 flex flex-col items-center'>
         <div className='flex flex-col pb-14 border-b border-slate-500/10 w-full items-center justify-center'>
           <span className='h-10 w-10 inline-block rounded-lg bg-slate-800 flex items-center border-t border-sky-300/20 justify-center text-lg uppercase text-white'>
             c
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='w-full pt-8 flex flex-col md:flex-row items-center md:justify-between '>
+        <div className='w-full pt-8 gap-3 flex flex-col md:flex-row items-center md:justify-between '>
           <p className='text-sm text-slate-500'>
             Copyright © 2022 Codas. All rights reserved
           </p>

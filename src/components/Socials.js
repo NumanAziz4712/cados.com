@@ -3,7 +3,7 @@ const Socials = () => {
   return (
     <div className=' mt-28 border-t border-b border-slate-500/10'>
       <div className='custom-container pt-12 md:pt-20 pb-10'>
-        <h3 className='text-slate-300 font-normal text-lg md:text-xl md:font-semibold text-center'>
+        <h3 className='text-slate-300 font-normal text-base md:text-xl md:font-semibold text-center'>
           Trusted by companies around the globe
         </h3>
 

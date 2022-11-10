@@ -26,7 +26,15 @@ const Companies = () => {
       {/* ------------------ */}
       {/* companies grid */}
       {/* ------------------ */}
-      {companies && <CompanyCard companies={companies} />}
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-20 xl:grid-cols-3 2xl:grid-cols-5 gap-6 '>
+        {companies &&
+          companies.companies.map((company) => (
+            <CompanyCard
+              company={company}
+              key={company.id}
+            />
+          ))}
+      </div>
     </div>
   );
 };
