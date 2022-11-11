@@ -2,11 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Searchbar from "./Searchbar";
-import {
-  Bars3Icon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import MobileNav from "./MobileNav";
+import Logo from "../data/codas.png";
 const Navbar = () => {
   const [active, setActive] = useState(false);
 
@@ -25,13 +23,9 @@ const Navbar = () => {
           {/* ----------------- */}
           {/* logo */}
           {/* ----------------- */}
-          <div className='flex mt-6 md:mt-0 items-center gap-3'>
-            <span className=' rounded-sm  bg-slate-800 border border-slate-700/80 flex items-center justify-center font-bold text-2xl h-8 w-8 text-slate-50'>
-              C
-            </span>
-            <span className='font-bold text-2xl text-slate-50'>
-              codas.
-            </span>
+
+          <div>
+            <img src={Logo} className='h-8' alt='gg' />
           </div>
 
           {/* ---------------- */}

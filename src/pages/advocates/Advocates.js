@@ -1,18 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAllAdvocates } from "../../hooks/useAllAdvocates";
 import AdvocateCard from "./AdvocateCard";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import Pagination from "react-js-pagination";
+import Loader from "../../components/Loader";
 
 const Advocates = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("query");
-  const resPerPage = 6;
-  let page = 1;
 
-  const { advocates, loading } = useAllAdvocates(
+  const { advocates, loading, error } = useAllAdvocates(
     !query
       ? `https://cados.up.railway.app/advocates`
       : ` https://cados.up.railway.app/advocates/?format=json&query=${query}`
@@ -25,8 +22,11 @@ const Advocates = () => {
     }
   }, [query]);
 
-  // handle
-  const handlePageClick = (currentPage) => {};
+  // errors
+  if (error) {
+    return <div className='mt-20 text-center'>{error}</div>;
+  }
+
   return (
     <div className='custom-container  my-20  mb-24'>
       {/* ---------------- */}
@@ -48,7 +48,9 @@ const Advocates = () => {
       {/* advocates grid */}
       {/* ---------------- */}
       {loading ? (
-        <p>loading...</p>
+        <div className='mt-20'>
+          <Loader />
+        </div>
       ) : (
         advocates && (
           <AdvocateCard

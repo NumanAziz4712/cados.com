@@ -22,7 +22,7 @@ const Home = () => {
       <div className='grid lg:grid-cols-2 grid-cols-1 custom-container items-center justify-between gap-12 lg:mt-28 mt-24 mb-28 '>
         {/* main heading */}
         <div className='flex-1'>
-          <h1 className='capitalize md:px-8 lg:px-0 text-center lg:text-left font-medium leading-[150%]  sm:leading-[130%] text-sky-100 text-4xl  sm:text-5xl'>
+          <h1 className='capitalize animate-slideleft md:px-8 lg:px-0 text-center lg:text-left font-medium leading-[150%]  sm:leading-[130%] text-sky-100 text-4xl  sm:text-5xl'>
             finding developer{" "}
             <span class='relative whitespace-nowrap '>
               <svg
@@ -38,14 +38,14 @@ const Home = () => {
             made easy.
           </h1>
 
-          <p className='text-xl text-center mx-auto lg:mx-0 lg:text-left md:max-w-md max-w-lg leading-[150%] mt-10'>
+          <p className='text-xl text-center mx-auto lg:mx-0 lg:text-left animate-slowfade md:max-w-md max-w-lg leading-[150%] mt-10'>
             Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Obcaecati accusantium id
             soluta repellat iusto
           </p>
 
           {/* ---- hero links */}
-          <div className='flex mt-14 lg:justify-start justify-center flex-col sm:flex-row items-center sm:gap-6 gap-3'>
+          <div className='flex mt-14 animate-slideup lg:justify-start justify-center flex-col sm:flex-row items-center sm:gap-6 gap-3'>
             <Link
               to={"/advocates"}
               className=' uppercase transition-all duration-300 tracking-wide text-slate-900 font-medium rounded-full hover:bg-sky-300 hover:shadow-lg hover:shadow-sky-300/20 text-center bg-sky-400 px-8 py-3 sm:w-auto text-sm sm:text-base w-full'
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
 
         {/* hero image */}
-        <div className='relative h-full w-full'>
+        <div className='relative animate-slowfade h-full w-full'>
           <img
             alt=''
             src='blur-cyan.png'

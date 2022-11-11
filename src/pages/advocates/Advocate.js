@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/Loader";
 import { useAllAdvocates } from "../../hooks/useAllAdvocates";
 import { useAllCompanies } from "../../hooks/useAllCompanies";
 import CompanyCard from "../companies/CompanyCard";
@@ -47,7 +48,9 @@ const Advocate = () => {
 
   if (loading) {
     return (
-      <div className='text-center mt-20'>Loading...</div>
+      <div className=' mt-40'>
+        <Loader />
+      </div>
     );
   }
 
@@ -103,10 +106,18 @@ const Advocate = () => {
                   href={advocate.twitter}
                   className='flex flex-col items-center'
                 >
-                  <span className='font-semibold text-sky-200 tracking-wide'>
-                    Twitch
-                  </span>
-                  <a className='text-[10px] tracking-widest uppercase '>
+                  <svg
+                    width='25'
+                    height='24'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      d='M21.557 7.18c.01.212.01.414.01.625.009 6.403-4.696 13.795-13.3 13.795-2.537 0-5.028-.758-7.167-2.18a9.174 9.174 0 006.918-2.016c-2-.038-3.76-1.391-4.371-3.369a4.366 4.366 0 002.111-.086c-2.176-.442-3.741-2.429-3.75-4.743V9.15c.648.374 1.38.585 2.12.605C2.082 8.333 1.443 5.5 2.684 3.284c2.38 3.033 5.88 4.866 9.64 5.068a4.98 4.98 0 011.352-4.637c1.88-1.833 4.844-1.737 6.621.211a9.093 9.093 0 002.973-1.18 4.855 4.855 0 01-2.056 2.678 9.363 9.363 0 002.686-.758 9.77 9.77 0 01-2.343 2.515z'
+                      fill='#83dcfd'
+                    />
+                  </svg>
+                  <a className='text-[10px] mt-[2px] tracking-widest uppercase '>
                     twitter
                   </a>
                 </a>

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 const CompanyCard = ({ company }) => {
   return (
-    <Link
-      to={`/companies/${company.username}`}
-      className=' bg-slate-800 divide-y divide-slate-600/20  rounded-lg border border-slate-600/20 p-8 border-t-slate-600/70 flex flex-col justify-between '
-    >
+    <div className=' bg-slate-800 divide-y divide-slate-600/20  rounded-lg border  border-slate-600/20 p-8 border-t-slate-600/70 flex flex-col justify-between '>
       {/* -------------------- */}
       {/* company info wrapper */}
       {/* -------------------- */}
@@ -33,7 +30,7 @@ const CompanyCard = ({ company }) => {
           <p>{company.bio}</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

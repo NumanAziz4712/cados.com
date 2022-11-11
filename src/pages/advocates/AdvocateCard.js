@@ -44,8 +44,7 @@ const AdvocateCard = ({ advocates, query }) => {
         // advocate card
         // -----------------------
 
-        <Link
-          to={`/advocates/${advocate.username}`}
+        <div
           key={advocate.username}
           className=' bg-slate-800/60 divide-y divide-slate-600/20 rounded-lg border border-slate-600/10 border-t-slate-600/50 flex flex-col justify-between '
         >
@@ -89,21 +88,14 @@ const AdvocateCard = ({ advocates, query }) => {
                 followers
               </span>
             </div>
-            {/* <div className='flex flex-col items-center'>
-              <span className='font-semibold text-slate-200 tracking-wide'>
-                {advocate.companies.length > 0
-                  ? advocate.companies[0]
-                  : 0}
-              </span>
-              <span className='text-[10px] tracking-widest uppercase '>
-                companies
-              </span>
-            </div> */}
 
             {/* view profile */}
-            <Button title='view profile' />
+
+            <Link to={`/advocates/${advocate.username}`}>
+              <Button title='view profile' />{" "}
+            </Link>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );

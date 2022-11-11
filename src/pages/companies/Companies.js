@@ -1,14 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Loader from "../../components/Loader";
 import { useAllCompanies } from "../../hooks/useAllCompanies";
 import CompanyCard from "./CompanyCard";
 
 const Companies = () => {
   // use companies hook
-  const { companies } = useAllCompanies(
+  const { companies, loading, error } = useAllCompanies(
     `https://cados.up.railway.app/companies/`
   );
-  console.log(companies);
+
+  // errors
+  if (error) {
+    return <div className='mt-20 text-center'>{error}</div>;
+  }
   return (
     <div className='mt-12 mb-20 custom-container'>
       <div className='flex flex-col items-center gap-6'>
@@ -26,15 +29,21 @@ const Companies = () => {
       {/* ------------------ */}
       {/* companies grid */}
       {/* ------------------ */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-20 xl:grid-cols-3 2xl:grid-cols-5 gap-6 '>
-        {companies &&
-          companies.companies.map((company) => (
-            <CompanyCard
-              company={company}
-              key={company.id}
-            />
-          ))}
-      </div>
+      {loading ? (
+        <div className='mt-20'>
+          <Loader />
+        </div>
+      ) : (
+        <div className='grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-20 xl:grid-cols-3 2xl:grid-cols-5 gap-6 '>
+          {companies &&
+            companies.companies.map((company) => (
+              <CompanyCard
+                company={company}
+                key={company.id}
+              />
+            ))}
+        </div>
+      )}
     </div>
   );
 };

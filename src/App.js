@@ -5,7 +5,6 @@ import Advocates from "./pages/advocates/Advocates";
 import Advocate from "./pages/advocates/Advocate";
 import Home from "./pages/home/Home";
 import Companies from "./pages/companies/Companies";
-import Company from "./pages/companies/Company";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -21,10 +20,6 @@ function App() {
           element={<Advocate />}
         />
         <Route path='/companies' element={<Companies />} />
-        <Route
-          path='/companies/:id'
-          element={<Company />}
-        />
       </Routes>
     </div>
   );
